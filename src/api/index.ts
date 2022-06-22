@@ -1,4 +1,4 @@
 export const api = {
-  key: "991e370cebb18f4d9f3c9caaec7d39b1",
+  key: process.env.REACT_APP_WEATHER_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
