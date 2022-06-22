@@ -7,14 +7,18 @@ const App: React.FC = () => {
   const [weather, setWeather] = useState<any>({});
 
   const search = (event: any) => {
+    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setQuery('');
+        setWeather(result);
+        console.log(result)
+      })
+  }
+
+  const keySearch = (event: any) => {
     if (event.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then(res => res.json())
-        .then(result => {
-          setQuery('');
-          setWeather(result);
-          console.log(result)
-        })
+      search(event);
     }
   }
 
@@ -47,7 +51,7 @@ const App: React.FC = () => {
             placeholder="Search..."
             onChange={e => setQuery(e.target.value)}
             value={query}
-            onKeyPress={search}
+            onKeyPress={keySearch}
             onBlur={search}
           />
         </div>
