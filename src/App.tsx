@@ -68,7 +68,6 @@ const App: React.FC = () => {
         ) : (
           <div className="app__find-page">
             <p>&#9757;</p>
-            Find
           </div>
         )}
       </main>
