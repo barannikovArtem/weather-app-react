@@ -8,6 +8,7 @@
   background-image: url('./assets/search-360.jpg');
   background-size: cover;
   background-position: bottom;
+  background-repeat: repeat;
   transition: 0.4 ease-in-out;
   color: white;
 
@@ -33,21 +34,20 @@
 
   &__search-box {
     width: 100%;
-    margin: 0 0 75px;
+    margin: 0 0 80px;
   }
 
   &__search-bar {
     display: block;
     width: 100%;
-    padding: 15px;
-    margin-top: -25px;
+    padding: 7px;
 
     appearance: none;
     background: none;
     border: none;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 0px 0px 16px 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px 10px 25px 25px;
 
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
 
@@ -57,7 +57,8 @@
     transition: 0.4s ease-in-out;
 
     &:focus {
-      background-color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 15px;
     }
   }
 
@@ -65,15 +66,16 @@
     & .location {
       color: #fff;
       font-weight: 500;
-      font-size: 24px;
+      font-size: 32px;
       text-align: center;
       text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     & .date {
       color: #fff;
       font-weight: 300;
+      font-size: 22px;
       text-align: center;
       font-style: italic;
       text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
@@ -93,7 +95,7 @@
       padding: 15px 25px;
 
       color: #fff;
-      font-size: 102px;
+      font-size: 88px;
       font-weight: 900;
 
       text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
@@ -107,10 +109,11 @@
     }
   }
   &__find-page {
+    color: transparent;
+    text-shadow: 0 -30px 2px rgba(255,255,255,0.9);
     text-align: center;
     font-weight: 600;
-    font-size: 32px;
-    text-shadow: -15px -16px 5px rgba(50, 50, 70, 0.5);
+    font-size: 36px;
   }
 }
 

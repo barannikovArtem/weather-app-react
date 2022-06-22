@@ -67,7 +67,8 @@ const App: React.FC = () => {
           </>
         ) : (
           <div className="app__find-page">
-            Select a place
+            <p>&#9757;</p>
+            Find
           </div>
         )}
       </main>
