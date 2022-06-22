@@ -48,6 +48,7 @@ const App: React.FC = () => {
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
+            onBlur={search}
           />
         </div>
         {(typeof weather.main !== "undefined") ? (
