@@ -12,13 +12,17 @@ const App: React.FC = () => {
       .then(result => {
         setQuery('');
         setWeather(result);
-        console.log(result)
       })
   }
 
   const keySearch = (event: any) => {
     if (event.key === "Enter") {
-      search(event);
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setQuery('');
+        setWeather(result);
+      })
     }
   }
 
