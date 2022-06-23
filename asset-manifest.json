@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather-app-react/static/css/main.daa813fc.css",
-    "main.js": "/weather-app-react/static/js/main.3a090274.js",
+    "main.css": "/weather-app-react/static/css/main.ac35453c.css",
+    "main.js": "/weather-app-react/static/js/main.2732763b.js",
     "static/media/rain-360.jpg": "/weather-app-react/static/media/rain-360.9dca35b21e2b1ab0f801.jpg",
     "static/media/snow-360.jpg": "/weather-app-react/static/media/snow-360.b44e17efd85e7b1060cd.jpg",
     "static/media/clear-360.jpg": "/weather-app-react/static/media/clear-360.4c2db2b4f46f90901ca7.jpg",
@@ -9,11 +9,11 @@
     "static/media/sun-360.jpg": "/weather-app-react/static/media/sun-360.814e49f524fc7b2f6d57.jpg",
     "static/media/clouds-360.jpg": "/weather-app-react/static/media/clouds-360.f6dde9a1fabd65917564.jpg",
     "index.html": "/weather-app-react/index.html",
-    "main.daa813fc.css.map": "/weather-app-react/static/css/main.daa813fc.css.map",
-    "main.3a090274.js.map": "/weather-app-react/static/js/main.3a090274.js.map"
+    "main.ac35453c.css.map": "/weather-app-react/static/css/main.ac35453c.css.map",
+    "main.2732763b.js.map": "/weather-app-react/static/js/main.2732763b.js.map"
   },
   "entrypoints": [
-    "static/css/main.daa813fc.css",
-    "static/js/main.3a090274.js"
+    "static/css/main.ac35453c.css",
+    "static/js/main.2732763b.js"
   ]
 }
