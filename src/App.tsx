@@ -2,29 +2,20 @@ import React, { useState } from 'react';
 import { api } from './api';
 import classNames from 'classnames';
 
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  geocodeByPlaceId,
+  getLatLng,
+} from 'react-places-autocomplete';
+
+interface CoordinatesType {
+  lat: number,
+  lng: number,
+}
+
 const App: React.FC = () => {
   const [query, setQuery] = useState<string>('');
   const [weather, setWeather] = useState<any>({});
-
-  const search = (event: any) => {
-    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-      .then(res => res.json())
-      .then(result => {
-        setQuery('');
-        setWeather(result);
-      })
-  }
-
-  const keySearch = (event: any) => {
-    if (event.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-      .then(res => res.json())
-      .then(result => {
-        setQuery('');
-        setWeather(result);
-      })
-    }
-  }
 
   const dateBuilder = (d: Date) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -38,6 +29,15 @@ const App: React.FC = () => {
     return `${day} ${date} ${month} ${year}`
   }
 
+  const handleSelect = async (value: string) => {
+    setQuery(value.split(' ')[0]);
+    const resp = await fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+    .then(res => res.json())
+    .then(result => {
+      setWeather(result);
+    })
+  }
+
   return (
     <div className={classNames(
       'app',
@@ -49,15 +49,34 @@ const App: React.FC = () => {
     )}>
       <main>
         <div className="app__search-box">
-          <input 
-            type="text" 
-            className="app__search-bar"
-            placeholder="Search..."
-            onChange={e => setQuery(e.target.value)}
-            value={query}
-            onKeyPress={keySearch}
-            onBlur={search}
-          />
+          <PlacesAutocomplete
+            value={query} 
+            onChange={setQuery} 
+            onSelect={handleSelect}
+          >{({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                <div>
+                  <input {...getInputProps(
+                    {
+                      className: "app__search-bar",
+                      placeholder: "Type ",
+                    })} />
+
+                  <div>
+                    {loading ? <div>...Loading</div> : null}
+
+                    {suggestions.map((suggestion) => {
+                      console.log(suggestion, suggestions)
+                      return (
+                        <div className='app__search-list' {...getSuggestionItemProps(suggestion)} key={suggestion.placeId}>
+                          {suggestion.description}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            }
+          </PlacesAutocomplete>
         </div>
         {(typeof weather.main !== "undefined") ? (
           <>
