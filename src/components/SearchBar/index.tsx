@@ -2,6 +2,8 @@ import React from 'react';
 
 import PlacesAutocomplete from 'react-places-autocomplete';
 
+import './index.scss';
+
 interface Props {
   query: string;
   setQuery: (e: string) => void;
@@ -23,16 +25,19 @@ const SearchBar: React.FC<Props> = ({ query, setQuery, handleSelect }) => {
                 placeholder: "Find a city.",
               })} />
 
-            <div>
-              {loading ? <div>...Loading</div> : null}
-
-              {suggestions.map((suggestion) => {
-                return (
-                  <div className='app__search-item' {...getSuggestionItemProps(suggestion)} key={suggestion.placeId}>
-                    {suggestion.description}
-                  </div>
-                )
-              })}
+            <div className="autocomplete__list">
+              {loading ? <div className="autocomplete__loading">...Loading</div> : null}
+              {query.length > 0 ? (<ul className="app__search-list">
+                {suggestions.map((suggestion) => {
+                  return (
+                    <li className='app__search-item' {...getSuggestionItemProps(suggestion)} key={suggestion.placeId}>
+                      {suggestion.description}
+                    </li>
+                  )
+                })}
+              </ul>) : (
+                ''
+              )}
             </div>
           </div>
         )
