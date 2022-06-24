@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/weather-app-react/static/css/main.ac35453c.css",
-    "main.js": "/weather-app-react/static/js/main.2732763b.js",
+    "main.css": "/weather-app-react/static/css/main.7977b9df.css",
+    "main.js": "/weather-app-react/static/js/main.4c116b1d.js",
+    "static/media/snow.jpg": "/weather-app-react/static/media/snow.6cb035a3159887ac5427.jpg",
+    "static/media/rain.jpg": "/weather-app-react/static/media/rain.64a28556679b1e57b56e.jpg",
+    "static/media/sun.jpg": "/weather-app-react/static/media/sun.9097c902bfe9a7796919.jpg",
+    "static/media/clear.jpg": "/weather-app-react/static/media/clear.d3acd19b7ccf51f0d7ed.jpg",
+    "static/media/clouds.jpg": "/weather-app-react/static/media/clouds.9b4fe1a729209529f49b.jpg",
+    "static/media/search.jpg": "/weather-app-react/static/media/search.db87a5fb3c1d0b07d01a.jpg",
     "static/media/rain-360.jpg": "/weather-app-react/static/media/rain-360.9dca35b21e2b1ab0f801.jpg",
     "static/media/snow-360.jpg": "/weather-app-react/static/media/snow-360.b44e17efd85e7b1060cd.jpg",
+    "static/media/dark.jpg": "/weather-app-react/static/media/dark.f85591f957573613ce2d.jpg",
     "static/media/clear-360.jpg": "/weather-app-react/static/media/clear-360.4c2db2b4f46f90901ca7.jpg",
     "static/media/search-360.jpg": "/weather-app-react/static/media/search-360.caeb50fe2ca8848f4b7b.jpg",
     "static/media/sun-360.jpg": "/weather-app-react/static/media/sun-360.814e49f524fc7b2f6d57.jpg",
     "static/media/clouds-360.jpg": "/weather-app-react/static/media/clouds-360.f6dde9a1fabd65917564.jpg",
+    "static/media/dark-360.jpg": "/weather-app-react/static/media/dark-360.389fd2c615e982d8117f.jpg",
     "index.html": "/weather-app-react/index.html",
-    "main.ac35453c.css.map": "/weather-app-react/static/css/main.ac35453c.css.map",
-    "main.2732763b.js.map": "/weather-app-react/static/js/main.2732763b.js.map"
+    "main.7977b9df.css.map": "/weather-app-react/static/css/main.7977b9df.css.map",
+    "main.4c116b1d.js.map": "/weather-app-react/static/js/main.4c116b1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac35453c.css",
-    "static/js/main.2732763b.js"
+    "static/css/main.7977b9df.css",
+    "static/js/main.4c116b1d.js"
   ]
 }
