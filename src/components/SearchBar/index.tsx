@@ -12,7 +12,7 @@ interface Props {
 
 const SearchBar: React.FC<Props> = ({ query, setQuery, handleSelect }) => {
   return (
-    <div className="app__search-box">
+    <div className="weather__search-box">
     <PlacesAutocomplete
       value={query}
       onChange={setQuery} 
@@ -21,16 +21,16 @@ const SearchBar: React.FC<Props> = ({ query, setQuery, handleSelect }) => {
           <div>
             <input {...getInputProps(
               {
-                className: "app__search-bar",
+                className: "weather__search-bar",
                 placeholder: "Find a city.",
               })} />
 
             <div className="autocomplete__list">
               {loading ? <div className="autocomplete__loading">...Loading</div> : null}
-              {query.length > 0 ? (<ul className="app__search-list">
+              {query.length > 0 ? (<ul className="weather__search-list">
                 {suggestions.map((suggestion) => {
                   return (
-                    <li className='app__search-item' {...getSuggestionItemProps(suggestion)} key={suggestion.placeId}>
+                    <li className='weather__search-item' {...getSuggestionItemProps(suggestion)} key={suggestion.placeId}>
                       {suggestion.description}
                     </li>
                   )
