@@ -3,24 +3,11 @@ import { request } from '../../api';
 import classNames from 'classnames';
 
 import SearchBar from '../../components/SearchBar';
-import Header from '../../components/Header';
 
 const WeatherPage: React.FC = () => {
   const [query, setQuery] = useState<string>('');
   const [weather, setWeather] = useState<any>({});
   const [isError, setIsError] = useState<boolean>(false)
-
-  const dateBuilder = (d: Date) => {
-    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    let day = days[d.getDay()];
-    let date = d.getDate();
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-
-    return `${day}, ${date} ${month}, ${year}`
-  }
 
   const handleSelect = async (value: string) => {
     setQuery(value);
@@ -50,7 +37,6 @@ const WeatherPage: React.FC = () => {
         {rain: typeof weather.main !== "undefined" && weather.weather[0].main === "Rain"},
         {dark: isError === true},
       )}>
-        <Header />
         <div className="container">
           <main>
             <SearchBar query={query} setQuery={setQuery} handleSelect={handleSelect} />
@@ -74,9 +60,6 @@ const WeatherPage: React.FC = () => {
               </div>
             )}
           </main>
-          <footer className='footer'>
-            <div className="footer__date">{dateBuilder(new Date())}</div>
-          </footer>
         </div>
       </div>
   );
