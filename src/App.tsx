@@ -5,19 +5,19 @@ import WeatherPage from './pages/WeatherPage';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 
-import UresLayout from './layouts/UserLayout';
+import UserLayout from './layouts/UserLayout';
 
 const App: React.FC = () => {
   return (
-    <div className='app'>
+    <>
       <Routes>
-        <Route path="/" element={<UresLayout />}>
+        <Route path="/" element={<UserLayout />}>
           <Route index element={<HomePage />}/>
           <Route path="weather" element={<WeatherPage />}/>
           <Route path="*" element={<NotFoundPage />}/>
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

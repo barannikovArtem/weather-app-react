@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+
+import './index.scss';
 
 const dateBuilder = (d: Date) => {
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -15,10 +17,12 @@ const dateBuilder = (d: Date) => {
 
 const UserLayout = () => {
   return (
-    <>
+    <div className='app'>
       <header className="header">
-        <Link to="/">Home</Link>
-        <Link to="/weather">Weather</Link>
+        <div className="header__navbar">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/weather">Weather</NavLink>
+        </div>
       </header>
 
       <Outlet />
@@ -26,7 +30,7 @@ const UserLayout = () => {
       <footer className='footer'>
         <div className="footer__date">{dateBuilder(new Date())}</div>
       </footer>
-    </>
+    </div>
   );
 };
 

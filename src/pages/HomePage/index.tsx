@@ -1,8 +1,9 @@
 import React from 'react';
+import './index.scss'
 
 const HomePage: React.FC = () => {
   return (
-    <div className='app'>
+    <div className='home-page'>
       Home Page
     </div>
   );

@@ -1,146 +1,9 @@
+@import './variables/variables.scss';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.app {
-  height: 100vh;
-}
-
-.weather {
-  padding-top: 30px;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: repeat;
-  transition: 0.4 ease-in-out;
-  color: white;
-
-  position: relative;
-  background-image: url('../assets/search-360.jpg');
-
-  &.snow {
-  background-image: url('../assets/snow-360.jpg');
-  }
-
-  &.sun {
-  background-image: url('../assets/sun-360.jpg');
-  }
-
-  &.rain {
-  background-image: url('../assets/rain-360.jpg');
-  }
-
-  &.clouds {
-  background-image: url('../assets/clouds-360.jpg');
-  }
-
-  &.clear {
-  background-image: url('../assets/clear-360.jpg');
-  }
-
-  &.dark {
-  background-image: url('../assets/dark-360.jpg');
-  }
-
-  &__search-box {
-    width: 100%;
-    margin: 0 0 80px;
-  }
-
-  &__search-bar {
-    display: block;
-    width: 100%;
-    padding: 7px;
-
-    appearance: none;
-    background: none;
-    border: none;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 10px 10px 25px 25px;
-
-    box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
-
-    color: #313131;
-    font-size: 20px;
-    font-family: 'Bitter', serif;
-    font-weight: 600;
-
-    transition: 0.4s ease-in-out;
-
-    &::placeholder {
-      font-family: serif;
-      font-size: 24px;
-      color: rgba(0, 0, 0, 0.9);
-      letter-spacing: 3px;
-      transition: 0.5 ease;
-      padding: 0 15px;
-      text-align: center;
-    }
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 20px;
-
-      &::placeholder {
-        color: rgba(0, 0, 0, 0);
-      }
-    }
-  }
-
-  &__location-box {
-    & .location {
-      color: #fff;
-      font-weight: 500;
-      font-size: 32px;
-      text-align: center;
-      text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-
-      margin-bottom: 15px;
-    }
-    & .date {
-      color: #fff;
-      font-weight: 300;
-      font-size: 22px;
-      text-align: center;
-      font-style: italic;
-      text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
-    }
-  }
-
-  &__weather-box {
-    text-align: center;
-    &__temp {
-      display: inline-block;
-      margin: 30px auto;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 30%;
-      text-align: center;
-
-      padding: 15px 25px;
-
-      color: #fff;
-      font-size: 88px;
-      font-weight: 900;
-
-      text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
-      box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
-
-      z-index: 0;
-    }
-    &__type {
-      color: #fff;
-      font-size: 36px;
-      font-weight: 700;
-      text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
-    }
-  }
-  &__find-page {
-    text-align: center;
-    font-size: 36px;
-    bottom: 0;
-  }
 }
 
 .container {
@@ -172,44 +35,22 @@ main {
   }
 }
 
-@media screen and (min-width: 700px) {
-  .weather {
-    height: 100vh;
-    background-image: url('../assets/search.jpg');
-    &.snow {
-      background-image: url('../assets/snow.jpg');
-      }
-    
-      &.sun {
-      background-image: url('../assets/sun.jpg');
-      }
-    
-      &.dark {
-      background-image: url('../assets/dark.jpg');
-      }
-    
-      &.rain {
-      background-image: url('../assets/rain.jpg');
-      }
-    
-      &.clouds {
-      background-image: url('../assets/clouds.jpg');
-      }
-    
-      &.clear {
-      background-image: url('../assets/clear.jpg');
-      }
-  }
-  .container {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    max-height: 80vh;
-  }
-  main {
-    min-height: 60vh;
-  }
+.container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-height: 80vh;
+}
+main {
+  min-height: 60vh;
+}
+
+.active {
+  color: #31fff2;
+  cursor: default;
+  text-decoration: none;
+  border: 1px solid;
 }

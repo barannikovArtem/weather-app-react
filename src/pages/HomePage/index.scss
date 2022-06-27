@@ -1,0 +1,8 @@
+@import '../../styles/variables/variables.scss';
+
+.home-page {
+  padding: $header-size +10px 10px 10px 10px;
+  max-height: 100%;
+  z-index: 12;
+  font-size: 22px;
+}
